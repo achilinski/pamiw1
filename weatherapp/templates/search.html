@@ -1,0 +1,9 @@
+<h1>Search your City</h1>
+<hr>
+
+<form action="getLocation" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit">
+
+</form>

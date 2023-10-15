@@ -1,0 +1,15 @@
+<h1>Search your City</h1>
+<hr>
+
+<form action="getLocation" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit">
+    <h1>Choose your city</h1>
+    <ul>
+        {% for city in data %}
+        <a href= "forecast/{{ city.Key }}"><li>{{ city.LocalizedName }}</li></a>
+        {% endfor %}
+    </ul>
+
+</form>
